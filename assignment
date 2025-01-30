@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+class car {
+	public:
+		
+		std::string brand;
+		std::string model;
+		float price;
+		int mileage;
+		
+		car(std::string b, std::string m, float p, int mile):brand(b), model(m), price(p), mileage(mile){}
+		
+		void display() {
+			std::cout<<"brand:"<< brand << "model:"<< model <<"price:"<< price <<"mileage:"<< mileage<<"miles";
+					}
+		
+		void drive(int distance) {
+			mileage += distance;
+			std::cout<< "update mileage:" << mileage << "miles";
+		}
+	};
+
+int main() {
+	
+	car mycar("Toyota", "Corolla" ,20000 , 5000);
+	
+	mycar.display();
+	
+	mycar.drive(150);
+	
+	mycar.drive(300);
+	
+	return 0;
+}
